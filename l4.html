@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var str=prompt("enter the input");
+if(isNaN(str))
+{
+str=str.toUpperCase();
+for(var i=0;i<str.length;i++)
+{
+var char=str.charAt(i);
+if(char=="A"||char=="E"||char=="I"||char=="O"||char=="U")
+break;
+    }
+
+if(i<str.length)
+   alert("the pos of left most vowel is "+(i+1));
+   else
+   alert("no vowel found");
+}
+else
+{
+var str=parseInt(str);
+var a,b,temp=0;
+b=str;
+while(b>0)
+{
+a=parseInt(b%10);
+b=parseInt(b/10);
+temp=temp*10+a;
+}
+alert("the reverse of number is "+ temp);
+}
+</script>
+</body>
+</html>
